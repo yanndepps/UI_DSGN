@@ -25,6 +25,9 @@ nav {
   height: 100vh;
   background: #1d2226;
   width: 66%;
+  transform: translateX(50%);
+  opacity: 0;
+  transition: all .3s;
 }
 
 a.logo {
@@ -70,6 +73,40 @@ li a:hover {
 
 .open-nav {
   visibility: unset;
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+/* submenu added */
+.submenu {
+  padding: 0 1em;
+}
+
+.submenu p {
+  margin: 1em 0 1em 1em;
+  color: #707d88;
+  line-height: 1.4em;
+}
+
+.submenu ul {
+  margin: 1em 0 1em;
+}
+
+.submenu a {
+  /* font-weight: normal; */
+  color: #7b8994;
+  background: none;
+  font-weight: bold;
+}
+
+.submenu a:hover {
+  background: none;
+}
+
+li a {
+  font-weight: bold;
+  background: #282e33;
+  margin-bottom: 2px;
 }
 
 @media (min-width: 500px) {
@@ -82,6 +119,8 @@ li a:hover {
     background: none;
     position: unset;
     height: auto;
+    opacity: 1;
+    transform: translateX(0);
   }
 
   ul {
@@ -96,9 +135,54 @@ li a:hover {
     color: #addbff;
     display: block;
     padding: 1em;
+    background: none;
   }
 
   .active a {
     color: white;
+  }
+
+  /* added submenu */
+  header {
+    overflow: visible;
+  }
+
+  .sub {
+    position: relative;
+  }
+
+  .submenu {
+    display: none;
+  }
+
+  .sub:hover .submenu {
+    display: flex;
+    position: absolute;
+    top: 3.3em;
+    right: 0;
+    background: white;
+    padding: 1em 2em;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.07);
+  }
+
+  /* overwrites submenu */
+
+  .submenu ul {
+    display: block;
+    margin: 1.5em 0 0;
+  }
+
+  .submenu li a {
+    padding: 0 0 .5em 0;
+    font-weight: bold;
+    color: #1d2226;
+    font-size: .7em;
+    text-transform: uppercase;
+  }
+
+  .submenu p {
+    min-width: 12em;
+    padding-left: 1em;
+    border-left: 1px solid gray;
   }
 }
