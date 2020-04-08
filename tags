@@ -8,3 +8,4 @@ let	03_responsive_design/step_05/app.js	/^let onResize = function() {$/;"	f
 let	03_responsive_design/step_06/app.js	/^let onResize = function() {$/;"	f
 let	03_responsive_design/step_07/app.js	/^let onResize = function() {$/;"	f
 let	03_responsive_design/step_08/app.js	/^let onResize = function() {$/;"	f
+onResize	05_refactoring/step_04/app.js	/^var onResize = function() {$/;"	f
